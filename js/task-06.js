@@ -3,10 +3,10 @@ const userInputEl = document.querySelector("#validation-input");
 userInputEl.addEventListener("blur", (event) => {
   const minInpLength = userInputEl.dataset.length;
   let userInpLength = userInputEl.value.length;
-  if (userInpLength === minInpLength) {
-    userInputEl.classList.toggle("valid");
+  if (userInpLength !== minInpLength) {
+    userInputEl.classList.add("invalid");
   } else {
-    userInputEl.classList.toggle("invalid");
+    userInputEl.classList.add("valid");
   }
 });
 
