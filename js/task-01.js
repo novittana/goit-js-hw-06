@@ -1,25 +1,18 @@
-// Напиши скрипт, який:
-// 1.	Порахує і виведе в консоль кількість категорій в ul#categories, тобто елементів li.item.
-// 2.	Для кожного элемента li.item у списку ul#categories, знайде і виведе в консоль текст заголовку елемента (тегу <h2>) і кількість елементів в категорії (усіх <li>, вкладених в нього).
-// В результаті, в консолі будуть виведені наступні повідомлення.
+const categories = document.querySelector("ul#categories");
+const countItem = categories.children.length;
+console.log(`Number of categories: ${countItem}`);
 
-// Number of categories: 3
+const firstItemCateg = categories.firstElementChild.firstElementChild.textContent;
+ console.log(`Category: ${firstItemCateg}`);
+const firstItemCategNum = categories.firstElementChild.children[1].children.length;
+console.log(`Elements: ${firstItemCategNum}`);
 
-// Category: Animals
-// Elements: 4
+const secondItemCateg = categories.children[1].firstElementChild.textContent;
+console.log(`Category: ${secondItemCateg}`);
+const secondItemCategNum = categories.children[1].children[1].children.length;
+console.log(`Elements: ${secondItemCategNum}`);
 
-// Category: Products
-// Elements: 3
-
-// Category: Technologies
-// Elements: 5
-
-const categories = document.querySelector('#categories');
-const categChildren = categories.children;
-const countItem = categChildren.length;
-console.log(`Number of categories: ${countItem}`)
-
-// Вивести в айтемах перших дітей та порахувати кількість лі в останніх.
-
-const anim = document.querySelectorAll('.item');
-console.log(anim);
+const thirdItemCateg = categories.lastElementChild.firstElementChild.textContent;
+console.log(`Category: ${thirdItemCateg}`);
+const thirdItemCategNum = categories.lastElementChild.children[1].children.length;
+console.log(`Elements: ${thirdItemCategNum}`);
