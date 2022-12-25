@@ -30,6 +30,8 @@ console.log(boxesArr);
 
 function destroyBoxes() {
   divBoxesRef.innerHTML = "";
+  boxesArr.length = 0; //додала, так як innerHTML не впливає на створений масив, що не дає нам почати створення боксів спочатку.
+  sizeOfSide = 30; //Адже, розмір та самі елементи зберігаються від попереднього додавання
 }
 
 createBtnRef.addEventListener("click", createBoxes);
