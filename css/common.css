@@ -25,8 +25,12 @@ button {
 
 .gallery {
   display: flex;
+  list-style: none;
 }
 
-.gallery-item {
-  width: calc((100% - 60px) / 3);
+.gallery-item img {
+  width: calc((100vw - 60px) / 3);
+  box-sizing: border-box;
+  object-fit: cover;
+  height: 250px;
 }
