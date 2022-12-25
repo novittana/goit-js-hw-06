@@ -1,6 +1,17 @@
-const loginFormEl = document.querySelector("form.login-form");
+const form = document.querySelector("form.js-login-form");
 
-loginFormEl.addEventListener("submit", (event) => {
-  let userData = {};
-  alert("Всі поля мають бути заповнені");
-});
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
+
+  if (email.value === "" || password.value === "") {
+    return alert("Please fill in all the fields!");
+  }
+
+  console.log(`Login: ${email.value}, Password: ${password.value}`);
+  event.currentTarget.reset();
+}

@@ -10,4 +10,3 @@ changeColBtnEl.addEventListener('click', event => {
   nameColEl.textContent = color;
   bodyEl.style.backgroundColor = color;
 })
-

@@ -7,8 +7,10 @@ userInputEl.addEventListener("blur", (event) => {
   let borderStyle;
   if (userInpLength !== minInpLength) {
     borderStyle = userInputEl.classList.add("invalid");
+    userInputEl.classList.remove("valid");
   } else {
     borderStyle = userInputEl.classList.add("valid");
+    userInputEl.classList.remove("invalid");
   }
   return borderStyle;
 });
